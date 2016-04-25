@@ -18,7 +18,7 @@ angular.module("App",["lumx","ngRoute","ngResource"])
         templateUrl: "templates/post.html"
       })
       .otherwise({
-          redirectTo: '/index'
+          redirectTo: '/'
       });
 
       locationProvider.html5Mode({

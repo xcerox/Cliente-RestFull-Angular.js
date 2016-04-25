@@ -15,21 +15,21 @@ angular.module("App")
           })
     }
   }])
-  .controller("postController",['$scope','PostService','$routeParams',function(scope,Post,Params) {
+  .controller("postController",['$scope','PostService','$routeParams','$location',function(scope,Post,Params,route) {
       scope.post = Post.get({id: Params.id});
       scope.tittle = "Editar Post";
       scope.savePost = function(){
         Post.update({id: scope.post.id},{data: scope.post},function(data){
-          location.path("post/"+scope.post.id);
+          route.path("post/"+scope.post.id);
         });
       }
   }])
-  .controller("postNewController",['$scope','PostService','$location',function(scope,Post,location) {
+  .controller("postNewController",['$scope','PostService','$location',function(scope,Post,route) {
       scope.post = {};
       scope.tittle = "Nuevo Post";
       scope.savePost = function(){
         Post.save({data: scope.post},function(data){
-            location.path("post/"+scope.post.id);
+            route.path("post/"+scope.post.id);
         });
       }
   }]);
