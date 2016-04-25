@@ -3,22 +3,22 @@ angular.module("App",["lumx","ngRoute","ngResource"])
     routeProvider
       .when("/",{
           controller: "mainController",
-          templateUrl: "/templates/home.html"
+          templateUrl: "templates/home.html"
       })
       .when("/post/new/",{
         controller: "postNewController",
-        templateUrl: "/templates/post_form.html"
+        templateUrl: "templates/post_form.html"
       })
       .when("/post/edit/:id",{
         controller: "postController",
-        templateUrl: "/templates/post_form.html"
+        templateUrl: "templates/post_form.html"
       })
       .when("/post/:id",{
         controller: "postController",
-        templateUrl: "/templates/post.html"
+        templateUrl: "templates/post.html"
       })
       .otherwise({
-          redirectTo: '/nes2'
+          redirectTo: '/'
       });
 
       locationProvider.html5Mode({
