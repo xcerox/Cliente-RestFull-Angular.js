@@ -12,8 +12,8 @@
           </div>
 
           <div class="card__actions">
-              <a href="#/post/{{post.id}}" class="btn btn--m btn--green btn--flat" lx-ripple>Leer mas </a>
-              <a href="#/post/edit/{{post.id}}" class="btn btn--m btn--orange btn--flat" lx-ripple>Actualizar </a>
+              <a href="/post/{{post.id}}" class="btn btn--m btn--green btn--flat" lx-ripple>Leer mas </a>
+              <a href="/post/edit/{{post.id}}" class="btn btn--m btn--orange btn--flat" lx-ripple>Actualizar </a>
               <a ng-click="remove(post)" class="btn btn--m btn--red btn--flat" lx-ripple>Eliminar</a>
           </div>
         </div>
@@ -23,7 +23,7 @@
         <div class="card top-space" ng-repeat="user in users">
             <div flex-container="row">
               <div class="card__img card__img--left" style="height: 160px;">
-                  <img src="imgs\user.jpg"/>
+                  <img src="/imgs/user.jpg"/>
               </div>
 
               <div flex-item flex-container="column">
@@ -32,7 +32,7 @@
                   <span class="fs-subhead tc-blank-2 display-block">{{user.email}}</span>
                 </div>
                 <div class="card__actions">
-                    <a href="#/">Ver</a>
+                    <a href="/">Ver</a>
                 </div>
               </div>
             </div>
