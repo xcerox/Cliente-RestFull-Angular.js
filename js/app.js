@@ -1,25 +1,26 @@
 angular.module("App",["lumx","ngRoute","ngResource"])
   .config(['$routeProvider','$locationProvider',function(routeProvider,locationProvider){
+
+      var baseUrl = 'Cliente-RestFull-Angular.js';
+
+
     routeProvider
-      .when("/",{
+      .when(baseUrl + "/",{
           controller: "mainController",
           templateUrl: "/templates/home.html"
       })
-      .when("post/new/",{
+      .when(baseUrl + "post/new/",{
         controller: "postNewController",
         templateUrl: "/templates/post_form.html"
       })
-      .when("post/edit/:id",{
+      .when(baseUrl + "post/edit/:id",{
         controller: "postController",
         templateUrl: "/templates/post_form.html"
       })
-      .when("post/:id",{
+      .when(baseUrl + "post/:id",{
         controller: "postController",
         templateUrl: "templates/post.html"
       });
 
-      locationProvider.html5Mode({
-                 enabled: true,
-                 requireBase: false
-          });
+      locationProvider.html5Mode(true);
   }]);
