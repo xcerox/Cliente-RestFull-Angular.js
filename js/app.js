@@ -1,7 +1,7 @@
 angular.module("App",["lumx","ngRoute","ngResource"])
   .config(['$routeProvider','$locationProvider',function(routeProvider,locationProvider){
     routeProvider
-      .when("/",{
+      .when("/home",{
           controller: "mainController",
           templateUrl: "templates/home.html"
       })
@@ -18,7 +18,7 @@ angular.module("App",["lumx","ngRoute","ngResource"])
         templateUrl: "templates/post.html"
       })
       .otherwise({
-          redirectTo: '/'
+          redirectTo: '/home'
       });
 
       locationProvider.html5Mode({
