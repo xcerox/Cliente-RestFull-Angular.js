@@ -20,7 +20,7 @@ angular.module("App")
       scope.tittle = "Editar Post";
       scope.savePost = function(){
         Post.update({id: scope.post.id},{data: scope.post},function(data){
-          location.path("/post/"+scope.post.id);
+          location.path("post/"+scope.post.id);
         });
       }
   }])
@@ -29,7 +29,7 @@ angular.module("App")
       scope.tittle = "Nuevo Post";
       scope.savePost = function(){
         Post.save({data: scope.post},function(data){
-            location.path("/post/"+scope.post.id);
+            location.path("post/"+scope.post.id);
         });
       }
   }]);
