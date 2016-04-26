@@ -24,7 +24,7 @@ angular.module("App")
         });
       }
 
-      scope.$back = function() {
+      scope.back = function() {
           window.history.back();
       }
   }])
