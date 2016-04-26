@@ -22,7 +22,7 @@ angular.module("App",["lumx","ngRoute","ngResource"])
       });
 
       locationProvider.html5Mode({
-        enabled: true,
-        requireBase: true
-      });
+                 enabled: true,
+                 requireBase: true
+          });
   }]);
